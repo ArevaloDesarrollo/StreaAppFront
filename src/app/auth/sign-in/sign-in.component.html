@@ -1,0 +1,47 @@
+
+<div class="container-flex">
+  <ion-card class="card-transparent">
+    
+    <ion-card-header>
+      <ion-card-title class="text-card-title">Registrar Usuario</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <form 
+        action=""
+        autocomplete="off"
+        [formGroup]="FormReactive"
+        
+      >
+        <div class="input-field">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" placeholder="Nombres" formControlName="name" id="name" name="name" (blur)="validField($event)"/>
+        </div>
+        <div class="input-field">
+          <ion-icon name="person-outline"></ion-icon>
+          <input type="text" placeholder="Apellidos" formControlName="lastName" id="lastName" name="lastName" (blur)="validField($event)"/>
+        </div>
+        <div class="input-field">
+          <ion-icon name="call-outline"></ion-icon>
+          <input type="text" placeholder="Numero de Telefono" formControlName="cellPhone" id="cellPhone" name="cellPhone" (blur)="validField($event)"/>
+        </div>
+        <div class="input-field">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" placeholder="Correo Electrónico" formControlName="email" id="email" name="email" (blur)="validField($event)"/>
+        </div>
+        <div class="input-field">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <input type="text" placeholder="Nombre de Usuario" formControlName="username" id="username" name="username" (blur)="validField($event)"/>
+        </div>
+        <div class="input-field">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" placeholder="Contraseña" formControlName="password" id="password" name="password" (blur)="validField($event)"/>
+        </div>
+        
+        <button class="btn" type="submit" [disabled]="FormReactive.invalid">Registrarse</button>
+
+      </form>
+    </ion-card-content>
+  
+  </ion-card>
+</div>

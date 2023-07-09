@@ -1,0 +1,112 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+body{
+    background: rgb(131,152,205);
+    background: linear-gradient(153deg, rgba(131,152,205,1) 0%, rgba(55,159,217,1) 29%, rgba(55,114,184,1) 59%, rgba(44,152,156,1) 100%);
+}
+
+input{
+    all: unset;
+    background: transparent;
+    color: black;
+    font-weight: 600;
+}
+
+.background-transparent{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container-flex{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-transparent{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.text-black{
+    color: #000;
+}
+
+.input-field{
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 2px solid #717171;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    ion-icon{
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        font-size: 25px;
+    }
+}
+
+.red-border{
+    border: 2px solid #751515;
+}
+
+.btn{
+    all: unset;
+    display: block;
+    min-width: 50%;
+    padding: 15px;
+    color: #FFF;
+    background: rgb(47,40,111);
+    background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px auto;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover{
+    background: darken($color: rgb(47,40,111), $amount: 0.5);
+}
+
+.btn:disabled{
+    background: #999;
+}
+
+.text-card-title{
+    color: rgb(47,40,111);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0;
+}
