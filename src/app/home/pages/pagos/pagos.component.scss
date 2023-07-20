@@ -1,0 +1,66 @@
+.input-item{
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: 15px auto;
+    background-color: #EEE;
+    padding: 15px;
+    border-radius: 60px;
+    box-shadow: 0px 1px 5px #999;
+    gap: 10px;
+}
+
+.input-item ion-icon{
+    color: #666;
+}
+
+.input-item input{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    font-weight: 700;
+}
+
+.button-solid{
+    --background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    --background-activated: var(--ion-color-primary-shade, #3171e0);
+    --background-focused: var(--ion-color-primary-shade, #3171e0);
+    --background-hover: var(--ion-color-primary-tint, #4c8dff);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+ .button-prop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+ }
+
+ .texto-card-principal{
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+ }
+
+ .texto-ligth-card{
+    font-size: 24px;
+    font-weight: 400;
+ }
+
+ .text-tag-card{
+    display: inline-block;
+    background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.img-final{
+    width: 30px;
+    height: auto;
+}

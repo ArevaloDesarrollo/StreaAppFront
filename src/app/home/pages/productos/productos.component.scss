@@ -1,0 +1,43 @@
+ion-searchbar div input.searchbar-input.sc-ion-searchbar-ios{
+    border-radius: 40px !important;
+    padding: 20px 30px !important;
+    font-weight: 600 !important;
+}
+
+.title-heade-card{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(83,71,151,1);
+}
+
+.header-card-ventas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenido-secundari-header{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 20px;
+}
+
+.item-secundario{
+    color: #333;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.item-ligth{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.image-logo-cuenta{
+    max-width: 90px;
+    height: auto;
+}

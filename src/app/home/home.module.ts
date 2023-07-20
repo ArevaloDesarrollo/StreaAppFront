@@ -5,15 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { SharedModule } from '../shared/shared.module';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { PagosComponent } from './pages/pagos/pagos.component';
+import { InformacionComponent } from './pages/informacion/informacion.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, InicioComponent, ProductosComponent, PagosComponent, InformacionComponent]
 })
 export class HomePageModule {}

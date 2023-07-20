@@ -1,0 +1,16 @@
+ion-tab-bar{
+    border-radius: 20px 20px 0px 0px;
+}
+
+ion-tab-button.tab-selected::part(native){
+    border-radius: 20px 20px 0px 0px;
+    background: rgb(47,40,111);
+    background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    color: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+.contenido-slider{
+    max-height: 250px;
+    height: auto;
+}

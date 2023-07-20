@@ -1,0 +1,62 @@
+
+
+.button-solid{
+    --background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    --background-activated: var(--ion-color-primary-shade, #3171e0);
+    --background-focused: var(--ion-color-primary-shade, #3171e0);
+    --background-hover: var(--ion-color-primary-tint, #4c8dff);
+    font-weight: 500;
+}
+
+.image-promocional{
+    border-radius: 30px;
+    overflow: hidden;
+    max-height: 250px;
+    object-fit: cover;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-precio-card{
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.card-carrousel{
+    max-width: 150px;
+    border-radius: 40px;
+}
+
+.contenido-card-carrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrousel  {
+    display: grid;
+    grid-template-columns: repeat(var(--cantidad-items), 150px);
+    gap: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.text-title-section{
+    display: block;
+    font-size: 35px;
+    margin: 10px;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.carrousel::-webkit-scrollbar{
+    display: none !important;
+}
+
+.image-carrousel{
+    height: 150px;
+    object-fit: cover;
+}
