@@ -40,7 +40,6 @@ body{
 input{
     all: unset;
     background: transparent;
-    color: black;
     font-weight: 600;
 }
 
@@ -94,6 +93,10 @@ ion-content.content-transparent::part(background){
         margin-right: 10px;
         font-size: 25px;
     }
+}
+
+.input-field input{
+    width: 90%;
 }
 
 .red-border{
@@ -183,6 +186,26 @@ ion-content.content-transparent::part(background){
 
 .margin-top-20{
     margin-top: 20px;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30{
+    margin-bottom: 30px;
+}
+
+.margin-buttom-40{
+    margin-bottom: 40px;
+}
+
+.margin-buttom-50{
+    margin-bottom: 50px;
 }
 
 .width-100{

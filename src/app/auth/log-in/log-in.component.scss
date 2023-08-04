@@ -1,0 +1,52 @@
+.header{
+    min-height: 35%;
+    background: linear-gradient(153deg, rgba(131,152,205,1) 0%, rgba(55,159,217,1) 29%, rgba(55,114,184,1) 59%, rgba(44,152,156,1) 100%);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: -100px auto;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.formulario{
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.button-solid{
+    --background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    font-weight: 600;
+}
+
+.button-outline{
+    --border-color: rgba(83,71,151,1);
+    --border-width: 500;
+    --background-activated: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    --color-activated: #FFF;
+    font-weight: 600;
+    color: rgba(83,71,151,1);
+}
+
+.forgot-pass{
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.forgot-pass a{
+    text-decoration: none;
+    color: rgba(83,71,151,1);
+}

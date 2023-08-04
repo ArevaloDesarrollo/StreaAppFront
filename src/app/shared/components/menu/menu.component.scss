@@ -1,0 +1,15 @@
+.menu-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.menu-perfil ion-avatar{
+    width: 100px;
+    height: auto;
+}
+.menu-perfil ion-label{
+    font-size: 18px;
+    font-weight: 800;
+}

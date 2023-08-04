@@ -1,0 +1,49 @@
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="header">
+  </div>
+
+  <div class="logo">
+
+  </div>
+  
+  <div class="formulario">
+    <h3 class="heading">Iniciar Sesion</h3>
+
+    <form action="" autocomplete="off">
+
+      <div class="input-field margin-bottom-30">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <input type="text" placeholder="Nombre de Usuario o Correo" id="username" name="username"/>
+      </div>
+    
+      <div class="input-field margin-bottom-30">
+        <ion-icon name="eye-off-outline"></ion-icon>
+        <input type="password" placeholder="" id="password" name="password"/>
+      </div>
+
+      <div class="display-flex align-items justify-content-between">
+        <ion-button shape="round" fill="outline" (click)="toRegister()">
+          Registrarse
+        </ion-button>
+  
+        <ion-button shape="round">
+          Iniciar Sesion
+        </ion-button>
+      </div>
+
+      <div class="forgot-pass">
+        <a href="#">Olvidé Mi Contraseña</a>
+      </div>
+
+
+
+    </form>
+
+  </div>
+  
+</ion-content>
+
+
