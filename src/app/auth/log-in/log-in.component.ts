@@ -42,6 +42,8 @@ export class LogInComponent  implements OnInit {
       .subscribe( resp => {
         if(resp.ok === true){
 
+          this.router.navigateByUrl('/home');
+
         }else{
           Swal.fire({
             title: 'Error',

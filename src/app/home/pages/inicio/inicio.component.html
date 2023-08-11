@@ -1,12 +1,12 @@
 <ion-header [translucent]="true" mode="ios">
   <ion-toolbar>
-    <ion-title>Andres Gutierez</ion-title>
+    <ion-title>{{person.name}} {{person.last_name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" class="content-transparent">
   <ion-header collapse="condense" mode="ios">
     <ion-toolbar>
-      <ion-title size="large" class="color-white">Andres Gutierez</ion-title>
+      <ion-title size="large" class="color-white">{{person.name}} {{person.last_name}}</ion-title>
       <ion-avatar slot="end" class="ion-margin-end">
         <img alt="Image Avatar" src="https://www.w3schools.com/howto/img_avatar.png" />
       </ion-avatar>
@@ -28,7 +28,7 @@
               <ion-card-title class="title-small">SALDO</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <ion-label class="text-saldo-card">$4.000</ion-label>
+              <ion-label class="text-saldo-card">${{user.balance}}</ion-label>
               <ion-label class="text-small">Anterior $0</ion-label>
             </ion-card-content>
           </ion-card>

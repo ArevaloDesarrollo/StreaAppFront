@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ValidarJwtGuard } from './guards/validar-jwt.guard';
 
 const routes: Routes = [
   {
@@ -8,11 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [ValidarJwtGuard],
+    canLoad: [ValidarJwtGuard]
   },
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule)
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminModule),
+    canActivate: [ValidarJwtGuard],
+    canLoad: [ValidarJwtGuard]
   },
   {
     path: '',
