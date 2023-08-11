@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AddAcountsComponent } from './pages/add-acounts/add-acounts.component';
+import { StreamingComponent } from './pages/streaming/streaming.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'add-acount',
         component: AddAcountsComponent
+      },
+      {
+        path: 'streaming',
+        component: StreamingComponent
       },
       {
         path: '**',

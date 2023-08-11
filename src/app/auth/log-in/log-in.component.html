@@ -12,16 +12,21 @@
   <div class="formulario">
     <h3 class="heading">Iniciar Sesion</h3>
 
-    <form action="" autocomplete="off">
+    <form 
+      action="" 
+      autocomplete="off"
+      [formGroup]="FormReactive"
+      (ngSubmit)="login()"
+    >
 
       <div class="input-field margin-bottom-30">
         <ion-icon name="person-circle-outline"></ion-icon>
-        <input type="text" placeholder="Nombre de Usuario o Correo" id="username" name="username"/>
+        <input type="text" placeholder="Nombre de Usuario o Correo" formControlName="email"/>
       </div>
     
       <div class="input-field margin-bottom-30">
         <ion-icon name="eye-off-outline"></ion-icon>
-        <input type="password" placeholder="" id="password" name="password"/>
+        <input type="password" placeholder="Contraseña" formControlName="password"/>
       </div>
 
       <div class="display-flex align-items justify-content-between">
@@ -29,7 +34,7 @@
           Registrarse
         </ion-button>
   
-        <ion-button shape="round">
+        <ion-button shape="round" type="submit" [disabled]="FormReactive.invalid">
           Iniciar Sesion
         </ion-button>
       </div>

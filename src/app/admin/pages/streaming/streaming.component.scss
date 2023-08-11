@@ -1,0 +1,63 @@
+.drop-zone{
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    border: dashed 3px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.label-file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;    
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 100;
+    border-radius: 50%;
+
+    input[type="file"]{
+        display: none;
+    }
+
+}
+
+.content-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ion-img{
+        object-fit: cover;
+    }
+}
+
+.title-streaming{
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.button-solid{
+    --background: linear-gradient(117deg, rgba(47,40,111,1) 0%, rgba(83,71,151,1) 100%);
+    font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

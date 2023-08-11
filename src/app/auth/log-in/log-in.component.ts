@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { AuthService } from 'src/app/home/services/auth.service';
+import { ValidatorsService } from 'src/app/shared/services/validators.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-log-in',
@@ -8,13 +13,45 @@ import { Router } from '@angular/router';
 })
 export class LogInComponent  implements OnInit {
 
-  constructor(private router: Router) { }
+  public FormReactive: FormGroup = this.fb.group({
+    email: ['', [Validators.required, Validators.pattern(this.validatorsService.patternEmail)]],
+    password: ['', [Validators.required, Validators.minLength(8)]]
+  });
+
+
+  constructor(
+    private router: Router,
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private validatorsService: ValidatorsService
+  ) { }
 
   ngOnInit() {}
 
 
   toRegister(){
     this.router.navigateByUrl('/auth/signin');
+  }
+
+  public login(){
+    
+    const email: string = this.FormReactive.get('email')?.value;
+    const password: string = this.FormReactive.get('password')?.value;
+
+    this.authService.loginUser(email, password)
+      .subscribe( resp => {
+        if(resp.ok === true){
+
+        }else{
+          Swal.fire({
+            title: 'Error',
+            heightAuto: false,
+            icon: 'warning',
+            text: resp.message
+          });
+        }
+      }); 
+
   }
 
 }

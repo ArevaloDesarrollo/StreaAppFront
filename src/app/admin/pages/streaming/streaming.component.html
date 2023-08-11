@@ -1,0 +1,32 @@
+
+
+<form 
+  action=""
+  autocomplete="off"
+>
+
+  <h3 class="title-streaming">Agregar Plataforma Streaming</h3>
+
+  <div class="drop-zone">
+    <label class="label-file">
+      <input type="file" name="img-streaming" id="img-streaming" (change)="showPicture($event);" />
+      Agregar Foto
+    </label>
+    
+    <div class="content-img display-none" id="contentImg">
+      <ion-img src="" alt=""></ion-img>
+    </div>    
+  </div>
+  
+  <div class="input-field margin-bottom-30">
+    <ion-icon name="tv-outline"></ion-icon>
+    <input type="text" placeholder="Nombre Plataforma" id="username" name="username"/>
+  </div>
+  
+  <div class="content-button">
+    <ion-button type="button" (click)="registerStreaming()" shape="round">Registrar</ion-button>
+  </div>
+
+</form>
+
+
