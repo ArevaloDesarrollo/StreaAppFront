@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/home/services/auth.service';
 import { ValidatorsService } from 'src/app/shared/services/validators.service';
 import Swal from 'sweetalert2';
+import { BodyLogin } from '../interfaces/body-login';
 
 @Component({
   selector: 'app-log-in',
@@ -38,7 +39,9 @@ export class LogInComponent  implements OnInit {
     const email: string = this.FormReactive.get('email')?.value;
     const password: string = this.FormReactive.get('password')?.value;
 
-    this.authService.loginUser(email, password)
+    const body: BodyLogin = {email, password};
+
+    this.authService.loginUser(body)
       .subscribe( resp => {
         if(resp.ok === true){
 

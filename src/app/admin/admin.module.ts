@@ -8,6 +8,7 @@ import { AdminHomeComponent } from './pages/admin-home/admin-home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AddAcountsComponent } from './pages/add-acounts/add-acounts.component';
 import { StreamingComponent } from './pages/streaming/streaming.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { StreamingComponent } from './pages/streaming/streaming.component';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
-    IonicModule
+    IonicModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

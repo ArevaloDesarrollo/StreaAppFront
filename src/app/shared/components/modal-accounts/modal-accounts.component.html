@@ -1,0 +1,68 @@
+
+
+<ion-modal id="modalAccunts" #modal>
+  <ng-template>
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>{{account.streaming?.name}}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="light" (click)="modal.dismiss()">Cerrar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+
+      <ion-avatar>
+        <ion-img [src]="account.streaming?.img_url"></ion-img>
+      </ion-avatar>
+
+      <div class="flex-info-account">
+
+        <div class="info-account">
+          <ion-label class="icon-info-account">
+            <ion-icon name="mail"></ion-icon>
+          </ion-label>
+          <ion-label class="item-info-account">{{account.email}}</ion-label>
+          <ion-label>Correo</ion-label>
+        </div>
+
+        <div class="info-account">
+          <ion-label class="icon-info-account">
+            <ion-icon name="lock-closed"></ion-icon>
+          </ion-label>
+          <ion-label class="item-info-account">{{account.password}}</ion-label>
+          <ion-label>Contraseña</ion-label>
+        </div>
+
+        <div class="info-account">
+          <ion-label class="icon-info-account">
+            <ion-icon name="cash"></ion-icon>
+          </ion-label>
+          <ion-label class="item-info-account">{{account.streaming?.price_account | currency}}</ion-label>
+          <ion-label>Precio de Cuenta</ion-label>
+        </div>
+
+        <div class="info-account">
+          <ion-label class="icon-info-account">
+            <ion-icon name="cash"></ion-icon>
+          </ion-label>
+          <ion-label class="item-info-account">{{account.streaming?.price_profile | currency}}</ion-label>
+          <ion-label>Precio por Perfil</ion-label>
+        </div>
+
+        
+
+      </div>
+
+      <h3 class="title-profile">Perfiles</h3>
+      
+      <ion-list>
+        <ion-item *ngFor="let profile of account.profiles; let i = index">
+          <span>{{i + 1}}. </span> 
+          <ion-label><span>Nombre: </span> {{profile.name}} </ion-label>
+          <ion-label><span>Pin: </span> {{profile.pin}} </ion-label>
+        </ion-item>
+      </ion-list>
+
+
+    </ion-content>
+  </ng-template>
+</ion-modal>

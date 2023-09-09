@@ -208,6 +208,10 @@ ion-content.content-transparent::part(background){
     margin-bottom: 50px;
 }
 
+.padding-y-10{
+    padding: 10px 0;
+}
+
 .width-100{
     width: 100%;
 }
@@ -250,4 +254,16 @@ ion-content.content-transparent::part(background){
 
 .justify-content-end{
     justify-content: end;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.gap-5{
+    gap: 5px;
 }

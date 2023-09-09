@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { MenuController } from '@ionic/angular';
 
@@ -9,11 +10,19 @@ import { MenuController } from '@ionic/angular';
 })
 export class MenuComponent  implements OnInit {
 
-  constructor(private menuController: MenuController) { }
+  constructor(
+    private menuController: MenuController,
+    private router: Router,
+  ) { }
 
   ngOnInit() {}
 
   closeMenu(): void{
+    this.menuController.close();
+  }
+  
+  goToHome(): void{
+    this.router.navigateByUrl('/home');
     this.menuController.close();
   }
 

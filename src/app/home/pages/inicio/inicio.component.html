@@ -63,59 +63,23 @@
 
     <section>
       <ion-label class="text-title-section">Perfiles</ion-label>
-      <div class="carrousel" style="--cantidad-items: 4">
+      <div class="carrousel" [style]="styleProfiles">
         
-        <ion-card class="card-transparent card-carrousel ion-no-margin">
+        <ion-card
+          *ngFor="let streaming of streamingsProfiles; let i = index"
+          class="card-transparent card-carrousel ion-no-margin">
+          
           <img  class="image-carrousel"  
-                src="https://yt3.googleusercontent.com/ytc/AOPolaTEuBl58XHr_EzHbSFmXY4AiwA98TwCr-BmabgPiw=s900-c-k-c0x00ffffff-no-rj" 
-                alt="Logo Producto"
+                [src]="streaming.img_url" 
+                [alt]="streaming.name"
           >
           <ion-card-content>
             <div class="contenido-card-carrousel">
-              <ion-label class="text-precio-card">$10000</ion-label>
+              <ion-label class="text-precio-card">{{streaming.price_profile | currency}}</ion-label>
               <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
             </div>
           </ion-card-content>
-        </ion-card>  
-        
-        <ion-card class="card-transparent card-carrousel ion-no-margin">
-          <img  class="image-carrousel"  
-                src="https://hbomax-images.warnermediacdn.com/2020-05/square%20social%20logo%20400%20x%20400_0.png" 
-                alt="Logo Producto"
-          >
-          <ion-card-content>
-            <div class="contenido-card-carrousel">
-              <ion-label class="text-precio-card">$10000</ion-label>
-              <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
-            </div>
-          </ion-card-content>
-        </ion-card>  
-        
-        <ion-card class="card-transparent card-carrousel ion-no-margin">
-          <img  class="image-carrousel"  
-                src="https://store-images.s-microsoft.com/image/apps.42909.14495311847124170.e89a4dce-fd9a-4a10-b8e4-a6c3aa1c055e.80f09391-71e8-48c0-bbea-a26c2d8dc650" 
-                alt="Logo Producto"
-          >
-          <ion-card-content>
-            <div class="contenido-card-carrousel">
-              <ion-label class="text-precio-card">$10000</ion-label>
-              <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
-            </div>
-          </ion-card-content>
-        </ion-card>  
-        
-        <ion-card class="card-transparent card-carrousel ion-no-margin">
-          <img  class="image-carrousel"  
-                src="https://plataformas.news/online/nota_disney-tiene-luz-verde-para-utilizar-la-marca-star-en-brasil.jpg" 
-                alt="Logo Producto"
-          >
-          <ion-card-content>
-            <div class="contenido-card-carrousel">
-              <ion-label class="text-precio-card">$10000</ion-label>
-              <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
-            </div>
-          </ion-card-content>
-        </ion-card>  
+        </ion-card>
       
       </div>
     </section>
@@ -124,29 +88,19 @@
       <ion-label class="text-title-section">Cuentas</ion-label>
     </section>
 
-    <div class="carrousel" style="--cantidad-items: 4">
-        
-      <ion-card class="card-transparent card-carrousel ion-no-margin">
-        <img  class="image-carrousel"  
-              src="https://static.vecteezy.com/system/resources/previews/019/040/292/original/amazon-prime-video-logo-editorial-free-vector.jpg" 
-              alt="Logo Producto"
-        >
-        <ion-card-content>
-          <div class="contenido-card-carrousel">
-            <ion-label class="text-precio-card">$10000</ion-label>
-            <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
-          </div>
-        </ion-card-content>
-      </ion-card>  
+    <div class="carrousel" [style]="styleAccounts">
       
-      <ion-card class="card-transparent card-carrousel ion-no-margin">
+      <ion-card *ngFor="let streaming of streamings; let i = index"
+                class="card-transparent card-carrousel ion-no-margin"
+        >
+        
         <img  class="image-carrousel"  
-              src="https://i.blogs.es/9e11cc/blog_youtube-premium/840_560.png" 
-              alt="Logo Producto"
+              [src]="streaming.img_url" 
+              [alt]="streaming.name"
         >
         <ion-card-content>
           <div class="contenido-card-carrousel">
-            <ion-label class="text-precio-card">$10000</ion-label>
+            <ion-label class="text-precio-card">{{streaming.price_account | currency}}</ion-label>
             <ion-button shape="round">Vender <ion-icon name="bag-handle"></ion-icon></ion-button>
           </div>
         </ion-card-content>

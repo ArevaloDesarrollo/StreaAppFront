@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 import { tap, map, catchError } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
 
-
 import { AuthResponse } from 'src/app/auth/interfaces/auth-response';
 import { environment } from 'src/environments/environment';
 import { User } from 'src/app/auth/interfaces/user';
+import { BodyLogin } from 'src/app/auth/interfaces/body-login';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  public loginUser(email: string, password: string): Observable<AuthResponse>{
+  public loginUser({email, password}: BodyLogin): Observable<AuthResponse>{
     const url: string = `${this.urlBase}auth/login`;
     const body = {email, password};
     return this.http.post<AuthResponse>(url, body)
@@ -34,16 +34,15 @@ export class AuthService {
           }
         }),
         map( resp => resp ),
-        catchError(err => of(err.error)
-        )
+        catchError(err => of(err.error))
       );
   }
 
   public validateJWT(): Observable<boolean>{
 
-    const url = `${this.urlBase}auth/revalidateJWT`;
-    const token = localStorage.getItem('token') || '';
-    const headers = new HttpHeaders().set('token', token);
+    const url: string = `${this.urlBase}auth/revalidateJWT`;
+    const token: string = localStorage.getItem('token') || '';
+    const headers: HttpHeaders = new HttpHeaders().set('token', token);
 
     return this.http.get<AuthResponse>(url, {headers})
       .pipe(

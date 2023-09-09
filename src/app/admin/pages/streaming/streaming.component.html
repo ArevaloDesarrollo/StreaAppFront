@@ -1,8 +1,9 @@
 
 
 <form 
-  action=""
   autocomplete="off"
+  [formGroup]="FormReactive"
+  (ngSubmit)="registerStreaming()"
 >
 
   <h3 class="title-streaming">Agregar Plataforma Streaming</h3>
@@ -20,13 +21,39 @@
   
   <div class="input-field margin-bottom-30">
     <ion-icon name="tv-outline"></ion-icon>
-    <input type="text" placeholder="Nombre Plataforma" id="username" name="username"/>
+    <input type="text" placeholder="Nombre Plataforma" formControlName="name"/>
+  </div>
+  
+  <div class="input-field margin-bottom-30">
+    <ion-icon name="cash-outline"></ion-icon>
+    <input type="number" placeholder="Precio por Cuenta" formControlName="price_account"/>
+  </div>
+  
+  <div class="input-field margin-bottom-30">
+    <ion-icon name="cash-outline"></ion-icon>
+    <input type="number" placeholder="Precio por Perfil" formControlName="price_profile"/>
+  </div>
+  
+  
+  <div class="input-field margin-bottom-30">
+    <ion-icon name="cash-outline"></ion-icon>
+    <input type="number" placeholder="Cantidad de Perfiles" formControlName="amount_profiles"/>
   </div>
   
   <div class="content-button">
-    <ion-button type="button" (click)="registerStreaming()" shape="round">Registrar</ion-button>
+    <ion-button type="submit" shape="round">Registrar</ion-button>
   </div>
 
 </form>
+
+
+
+<div>
+
+  <h3 class="text-center">Tipos de Cuentas Registradas</h3>
+
+  <app-list-sliding [listStreamings] = "streamings"></app-list-sliding>
+
+</div>
 
 

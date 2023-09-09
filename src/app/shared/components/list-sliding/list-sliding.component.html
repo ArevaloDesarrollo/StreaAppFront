@@ -1,0 +1,30 @@
+
+
+
+
+<ion-list>
+
+  <ion-item-sliding *ngFor="let streaming of listStreamings; let i = index">
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [alt]="streaming.name" [src]="streaming.img_url" />
+      </ion-avatar>
+      <ion-label>{{streaming.name}}</ion-label>
+    </ion-item>
+
+    <ion-item-options side="end">
+      
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="pencil"></ion-icon>
+      </ion-item-option>
+
+      <ion-item-option color="danger">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-item-option>
+    
+    </ion-item-options>
+  
+  </ion-item-sliding>
+
+</ion-list>
